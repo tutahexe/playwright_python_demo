@@ -16,5 +16,6 @@ def ui(page: Page, context: BrowserContext):
                                         ".env")
         with open(config_file_path) as config:
             env_target = json.load(config)
-    ui_item = UI(page, context, url=env_target['env'], user=env_target['user'], password=env_target['password'])
+    ui_item = UI(page, context, user=env_target['user'], password=env_target['password'], url=env_target['url'])
+    ui_item.page.goto(env_target['url'])
     return ui_item
