@@ -3,7 +3,7 @@ import os
 
 import pytest
 from playwright.sync_api import Page, BrowserContext
-from fixture.ui_facade import UI
+from core.ui_facade import UI
 
 env_target = None
 

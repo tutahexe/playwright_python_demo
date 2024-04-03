@@ -1,6 +1,7 @@
-from Pages.login_page import LoginPage
-from Pages.main_page import MainPage
-from Steps.authorization_steps import AuthorizationSteps
+from pages.login_page import LoginPage
+from pages.shop_page import ShopPage
+from steps.authorization_steps import AuthorizationSteps
+from steps.shop_steps import ShopSteps
 
 
 class UI:
@@ -19,9 +20,10 @@ class UI:
 class Pages:
     def __init__(self, ui):
         self.login_page = LoginPage(ui)
-        self.main_page = MainPage(ui)
+        self.shop_page = ShopPage(ui)
 
 
 class Steps:
     def __init__(self, ui):
         self.authorization = AuthorizationSteps(ui)
+        self.shop = ShopSteps(ui)
